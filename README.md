@@ -11,7 +11,7 @@ The project is built with:
 
 - Java 21
 - Spring Boot 3.x
-- Gradle (wrapper included)
+- Gradle (wrapper included, version 8.5)
 - MySQL
 - Docker (optional containerized setup)
 
@@ -39,22 +39,31 @@ You can test API calls using:
 - Java 21 installed
 - MySQL running locally
 
+On Mac or Linux, you may need to make the wrapper executable.
+Navigate to project and run:
+```
+chmod +x gradlew
+```
+
 ### 1. Build the project
 
 From the project root:
-```
-gradlew clean build
-```
+
+|OS       | Command               |
+|---------|-----------------------|
+|Mac/Linux|`./gradlew clean build`|
+|Windows  |`gradlew clean build`  |
 
 ### 2. Run the application
 
-```
-gradlew bootRun
-```
+|OS       | Command           |
+|---------|-------------------|
+|Mac/Linux|`./gradlew bootRun`|
+|Windows  |`gradlew bootRun`  |
 
 OR run the generated jar:
 ```
-java -jar build/libs/neon-assignment-0.0.1-SNAPSHOT.jar
+java -jar build/libs/ReleaseTracker-0.0.1-SNAPSHOT.jar
 ```
 
 Application will start on:
@@ -152,14 +161,10 @@ Tests use H2 in-memory database.
 
 Run tests with:
 
-```
-gradlew test
-```
-
-If tests are marked as UP-TO-DATE and you want to rerun them:
-```
-gradlew clean test
-```
+|OS       | Command              |
+|---------|----------------------|
+|Mac/Linux|`./gradlew clean test`|
+|Windows  |`gradlew clean test`  |
 
 
 Test reports are generated at:
@@ -175,5 +180,5 @@ Open this file in a browser to see detailed results.
 
 - Status transitions are validated and invalid transitions return HTTP 400.
 - Tests are isolated and do not use MySQL.
-- Gradle Wrapper is included, so Gradle does not need to be installed separately.
+- Gradle Wrapper is included (version 8.5), so Gradle does not need to be installed separately.
 - Docker is optional but recommended for consistent environment setup.
