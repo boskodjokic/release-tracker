@@ -1,5 +1,7 @@
 # Release Tracker
 
+[![CI](https://github.com/boskodjokic/release-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/boskodjokic/release-tracker/actions/workflows/ci.yml)
+
 Simple Spring Boot application for managing software releases.
 
 The application allows creating, updating, deleting and filtering releases.
